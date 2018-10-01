@@ -3,6 +3,7 @@ import path from 'path'
 
 const server = express()
 
+// webpack configuration for Development React
 if (process.env.NODE_ENV !== 'production') {
   const webpack = require('webpack')
   const config = require('../../config/webpack.dev.js')
@@ -20,6 +21,13 @@ if (process.env.NODE_ENV !== 'production') {
 }
 server.use(express.static('dist'))
 
-server.listen(8080, () => {
-  console.log('Server is listening')
+// your routes here
+
+server.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../../dist/index.html'))
+})
+
+const port = process.env.PORT || 8080
+server.listen(port, () => {
+  console.log(`Server is listening on ${port}`)
 })
