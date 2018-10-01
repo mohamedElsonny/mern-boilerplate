@@ -13,7 +13,7 @@ module.exports = {
   },
   mode: process.env.NODE_ENV || 'development',
   output: {
-    filename: '[name]-bundle.js',
+    filename: '[name]-[contenthash]-bundle.js',
     path: path.resolve(__dirname, '../dist'),
     hotUpdateChunkFilename: '.hot/[id].[hash].hot-update.js',
     hotUpdateMainFilename: '.hot/[hash].hot-update.json'

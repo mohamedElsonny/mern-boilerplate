@@ -3,16 +3,17 @@
     [
       "@babel/env",
       {
+        "useBuiltIns": "usage",
         "targets": {
-          "browsers": ["last 2 versions"]
+          "browsers": [">1%", "not ie 11", "not op_mini all"]
         }
       }
     ],
     "@babel/react"
   ],
   "plugins": [
-    "@babel/plugin-proposal-class-properties",
-    "@babel/plugin-transform-runtime",
+    "@babel/proposal-class-properties",
+    "@babel/transform-runtime",
     "react-hot-loader/babel"
   ]
 }

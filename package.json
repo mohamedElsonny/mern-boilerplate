@@ -5,7 +5,7 @@
   "scripts": {
     "dev:webpack": "webpack-dev-server --config=config/webpack.dev.js --open",
     "dev": "nodemon --watch config --watch src/server src/server/index.js",
-    "build": "webpack --config=config/webpack.dev.js",
+    "build": "rm -rf dist && webpack --config=config/webpack.dev.js",
     "dev:debug": "nodemon --inspect --watch config --watch src/server src/server/index.js",
     "start": "yarn run build && node ./src/server/index.js"
   },
