@@ -24,4 +24,22 @@ h1 {
   font-size: 5em;
   color: #fff;
   text-shadow: 0 0 20px #000;
+  text-align: center;
+}
+
+button {
+  border: none;
+  background: orange;
+  cursor: pointer;
+  padding: 20px;
+  font-family: sans-serif;
+  font-size: 2em;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px #000;
+}
+
+button:hover,
+button:active {
+  background-color: orangered;
 }
