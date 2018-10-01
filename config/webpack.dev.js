@@ -11,7 +11,7 @@ module.exports = {
       './src/client/index.js'
     ]
   },
-  mode: 'development',
+  mode: process.env.NODE_ENV || 'development',
   output: {
     filename: '[name]-bundle.js',
     path: path.resolve(__dirname, '../dist'),
